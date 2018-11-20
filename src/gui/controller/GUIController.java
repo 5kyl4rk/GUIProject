@@ -11,7 +11,7 @@ public class GUIController
 	public GUIController()
 	{
 		gunter = new Penguin();
-		appFrame = new FirstFrame();
+		appFrame = new FirstFrame(this);//'this': means itself, in this cause sends information as itself
 	}
 	
 	public void start()
