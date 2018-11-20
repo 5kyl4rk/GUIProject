@@ -25,6 +25,6 @@ public class FirstFrame extends JFrame //'extends': access all the information f
 		this.setSize(800, 800);
 		this.setTitle("My first GUI");
 		this.setResizable(true);
-		this.setVisible(true);
+		this.setVisible(true); //allows you to see the frame, else your program will shutdown if there's nothing on screen.
 	}
 }
