@@ -36,19 +36,21 @@ public class FirstPanel extends JPanel
 		int red = (int)(Math.random() * 256);
 		int green = (int)(Math.random() * 256);
 		int blue = (int)(Math.random() * 256);
+		
 		this.setBackground(new Color(red, green, blue));
+		firstLabel.setText("Red: " + red + " Green: " + green + " Blue: " + blue);
 	}
 	
 	private void setupPanel() //attach components to frame
 	{
 		this.setLayout(appLayout);
-		this.add(firstButton);
+		this.add(firstButton); //adds components to panel, by default it will stack on top of each other if there isn't a layout
 		this.add(firstLabel);
 	}
 	
 	private void setupLayout() //arranges components on frame
 	{
-		//--normally, there is a seperate program that allows you to auto generate this, but basically these add constraints to object in panel
+		//--normally, there is a separate program that allows you to auto generate this, but basically these add constraints to object in panel
 		appLayout.putConstraint(SpringLayout.NORTH, firstLabel, 70, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.EAST, firstLabel, -90, SpringLayout.EAST, this);
 		appLayout.putConstraint(SpringLayout.WEST, firstButton, 175, SpringLayout.WEST, this);

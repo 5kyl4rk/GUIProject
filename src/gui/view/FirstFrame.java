@@ -19,7 +19,7 @@ public class FirstFrame extends JFrame //'extends': access all the information f
 		setupFrame();
 	}
 	
-	private void setupFrame()
+	private void setupFrame() //builds the frame
 	{
 		this.setContentPane(appPanel);//install panel to the frame
 		this.setSize(800, 800);
