@@ -22,7 +22,7 @@ public class FirstFrame extends JFrame //'extends': access all the information f
 	private void setupFrame() //builds the frame
 	{
 		this.setContentPane(appPanel);//install panel to the frame
-		this.setSize(800, 800);
+		this.setSize(500, 500);
 		this.setTitle("My first GUI");
 		this.setResizable(true);
 		this.setVisible(true); //allows you to see the frame, else your program will shutdown if there's nothing on screen.

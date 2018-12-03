@@ -25,7 +25,7 @@ public class FirstPanel extends JPanel
 		firstLabel = new JLabel("Words! Wow!");
 		firstButton = new JButton("Download Minecraft for FREE!");
 		appLayout = new SpringLayout();
-		
+
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -50,11 +50,17 @@ public class FirstPanel extends JPanel
 	
 	private void setupLayout() //arranges components on frame
 	{
-		//--normally, there is a separate program that allows you to auto generate this, but basically these add constraints to object in panel
-		appLayout.putConstraint(SpringLayout.NORTH, firstLabel, 70, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.EAST, firstLabel, -90, SpringLayout.EAST, this);
-		appLayout.putConstraint(SpringLayout.WEST, firstButton, 175, SpringLayout.WEST, this);
-		appLayout.putConstraint(SpringLayout.SOUTH, firstButton, -135, SpringLayout.SOUTH, this);
+		firstLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		
+		appLayout.putConstraint(SpringLayout.NORTH, firstButton, 260, SpringLayout.SOUTH, firstLabel);
+		appLayout.putConstraint(SpringLayout.WEST, firstButton, 0, SpringLayout.WEST, firstLabel);
+		appLayout.putConstraint(SpringLayout.SOUTH, firstButton, -50, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, firstButton, 0, SpringLayout.EAST, firstLabel);
+		appLayout.putConstraint(SpringLayout.WEST, firstLabel, 100, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.EAST, firstLabel, -100, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, firstLabel, 100, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, firstLabel, -350, SpringLayout.SOUTH, this);
 	}
 	
 	private void setupListeners()
