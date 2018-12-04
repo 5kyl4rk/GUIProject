@@ -60,6 +60,7 @@ public class FirstPanel extends JPanel
 		firstLabel.setText("Red: " + red + " Green: " + green + " Blue: " + blue);
 		
 		buttonCount.setText(counter());
+		buttonCount.setForeground(new Color(randomRGB(), randomRGB(), randomRGB()));
 	}
 	
 	private void setupPanel() //attach components to frame
